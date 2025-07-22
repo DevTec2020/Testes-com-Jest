@@ -6,6 +6,13 @@ describe ("sum", () => {
     // O beforeAll é usado para quando queremos executar algo antes dos codigos 
     beforeAll(() => {
         sumResult = 10
+        console.log("Executado Antes dos testes", sumResult)
+    })
+
+    // O afterall é exexutado depois dos testes 
+    afterAll(()  => {
+        sumResult = 0
+        console.log("Executado Depois dos testes", sumResult)
     })
 
     it(" should sum of 3 + 7 must be 10", () => {
