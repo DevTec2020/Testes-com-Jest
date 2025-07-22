@@ -1,10 +1,17 @@
 import { sum } from "./server"
 
 describe ("sum", () => {
-    test("sum of 3 + 7 must be 10", () => {
+    let sumResult: number
+
+    // O beforeAll é usado para quando queremos executar algo antes dos codigos 
+    beforeAll(() => {
+        sumResult = 10
+    })
+
+    it(" should sum of 3 + 7 must be 10", () => {
         const result = sum(3, 7)
     
-        expect(result).toBe(10)
+        expect(result).toBe(sumResult)
     
     })
     
